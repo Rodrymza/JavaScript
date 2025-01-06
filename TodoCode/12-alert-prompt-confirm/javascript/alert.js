@@ -1,0 +1,1 @@
+window.alert("Te la re mandaste loco")

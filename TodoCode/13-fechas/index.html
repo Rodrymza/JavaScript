@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de fechas</title>
+</head>
+<body>
+    <h1>Manejo de fechas en JavaScript</h1>
+<p>JavaScript proporciona el objeto Date para trabajar con fechas y horas.</p>
+<p>Para crear un objeto Date, puedes utilizar el constructor Date() y pasarle los siguientes parámetros:</p>
+<ul>
+  <li>Año (obligatorio)</li>
+  <li>Mes (obligatorio, 0-11)</li>
+  <li>Día (obligatorio)</li>
+  <li>Hora (opcional)</li>
+  <li>Minutos (opcional)</li>
+  <li_SEGUNDOS (opcional)</li>
+  <li>Milisegundos (opcional)</li>
+</ul>
+<p>Ejemplo:</p>
+<pre>
+  var fecha = new Date(2022, 0, 1);
+</pre>
+<p>También puedes obtener la fecha y hora actual utilizando:</p>
+<pre>
+  var fechaActual = new Date();
+</pre>
+<p>Para obtener los componentes de la fecha, puedes utilizar los siguientes métodos:</p>
+<ul>
+  <li>getFullYear(): devuelve el año</li>
+  <li>getMonth(): devuelve el mes (0-11)</li>
+  <li>getDate(): devuelve el día del mes</li>
+  <li>getHours(): devuelve la hora</li>
+  <li>getMinutes(): devuelve los minutos</li>
+  <li>getSeconds(): devuelve los segundos</li>
+  <li>getMilliseconds(): devuelve los milisegundos</li>
+</ul>
+<p>Ejemplo:</p>
+<pre>
+  var año = fecha.getFullYear();
+  var mes = fecha.getMonth();
+  var dia = fecha.getDate();
+</pre>
+<p>Para formatear la fecha, puedes utilizar los siguientes métodos:</p>
+<ul>
+  <li>toLocaleString(): devuelve una cadena con la fecha y hora en el formato local</li>
+  <li>toLocaleDateString(): devuelve una cadena con la fecha en el formato local</li>
+  <li>toLocaleTimeString(): devuelve una cadena con la hora en el formato local</li>
+</ul>
+<p>Ejemplo:</p>
+<pre>
+  var fechaFormateada = fecha.toLocaleString();
+</pre>
+    <h3>Métodos de la clase Date</h3>
+<ul>
+  <li><strong>getFullYear()</strong>: devuelve el año</li>
+  <li><strong>getMonth()</strong>: devuelve el mes (0-11)</li>
+  <li><strong>getDate()</strong>: devuelve el día del mes</li>
+  <li><strong>getHours()</strong>: devuelve la hora</li>
+  <li><strong>getMinutes()</strong>: devuelve los minutos</li>
+  <li><strong>getSeconds()</strong>: devuelve los segundos</li>
+  <li><strong>getMilliseconds()</strong>: devuelve los milisegundos</li>
+  <li><strong>toLocaleString()</strong>: devuelve una cadena con la fecha y hora en el formato local</li>
+  <li><strong>toLocaleDateString()</strong>: devuelve una cadena con la fecha en el formato local</li>
+  <li><strong>toLocaleTimeString()</strong>: devuelve una cadena con la hora en el formato local</li>
+  <li><strong>getTime()</strong>: devuelve el número de milisegundos desde el 1 de enero de 1970</li>
+  <li><strong>setFullYear()</strong>: establece el año</li>
+  <li><strong>setMonth()</strong>: establece el mes (0-11)</li>
+  <li><strong>setDate()</strong>: establece el día del mes</li>
+  <li><strong>setHours()</strong>: establece la hora</li>
+  <li><strong>setMinutes()</strong>: establece los minutos</li>
+  <li><strong>setSeconds()</strong>: establece los segundos</li>
+  <li><strong>setMilliseconds()</strong>: establece los milisegundos</li>
+</ul>
+<script src="javascript/fechas.js"></script>
+</body>
+</html>

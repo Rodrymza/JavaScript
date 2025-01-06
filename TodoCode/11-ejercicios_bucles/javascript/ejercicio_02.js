@@ -7,3 +7,9 @@ while (index >= 0) {
     index--
 }
 console.log("Feliz año nuevo")
+
+let numero = 1
+do {
+    console.log("contando" + numero)
+    numero++
+} while (numero <=10);
