@@ -1,0 +1,123 @@
+// Nodos y Objetos en el DOM de JavaScript
+
+// Los nodos son los elementos que componen el árbol del DOM (Document Object Model)
+// Cada nodo tiene una serie de propiedades y métodos que permiten interactuar con él
+
+// Los objetos en el DOM son instancias de la clase Node o de alguna de sus subclases
+// Algunas de las subclases más comunes son:
+// - Element: representa un elemento HTML
+// - Text: representa un nodo de texto
+// - Comment: representa un comentario en el código HTML
+// - Document: representa el documento HTML completo
+
+// Algunos ejemplos de nodos y objetos en el DOM:
+// - document: es el objeto que representa el documento HTML completo
+// - document.body: es el objeto que representa el cuerpo del documento HTML
+// - document.getElementById('id'): devuelve el objeto que representa el elemento con el id especificado
+
+// Propiedades y métodos comunes de los nodos:
+// - nodeName: devuelve el nombre del nodo
+// - nodeType: devuelve el tipo del nodo (1 para elementos, 3 para texto, etc.)
+// - nodeValue: devuelve el valor del nodo (para nodos de texto)
+// - parentNode: devuelve el nodo padre
+// - childNodes: devuelve una lista de nodos hijos
+// - appendChild(): agrega un nodo hijo al final de la lista
+// - removeChild(): elimina un nodo hijo de la lista
+
+// Ejemplo de uso:
+// var nodo = document.getElementById('miNodo');
+// console.log(nodo.nodeName); // imprime el nombre del nodo
+// console.log(nodo.nodeType); // imprime el tipo del nodo
+// console.log(nodo.nodeValue); // imprime el valor del nodo (si es un nodo de texto)
+// nodo.appendChild(document.createTextNode('Hola, mundo!')); // agrega un nodo de texto al final del nodo
+
+// Nodos raíz y padre en el DOM de JavaScript
+
+// El nodo raíz es el nodo más alto en el árbol del DOM, que es el documento HTML completo
+// En el caso del DOM, el nodo raíz es el objeto document
+
+// El nodo padre es el nodo que contiene a otro nodo, es decir, el nodo que es padre de otro nodo
+// Por ejemplo, si tenemos un elemento HTML <div> que contiene un elemento <p>, el nodo padre del elemento <p> es el nodo <div>
+
+// Propiedades y métodos relacionados con los nodos raíz y padre:
+// - document.documentElement: devuelve el nodo raíz del documento HTML
+// - parentNode: devuelve el nodo padre de un nodo
+// - parentElement: devuelve el nodo padre de un nodo, pero solo si es un elemento HTML
+
+// Ejemplo de uso:
+// var nodoRaiz = document.documentElement;
+// console.log(nodoRaiz.nodeName); // imprime el nombre del nodo raíz
+// var nodo = document.getElementById('miNodo');
+// var nodoPadre = nodo.parentNode;
+// console.log(nodoPadre.nodeName); // imprime el nombre del nodo padre
+
+// Nodos hijos y descendientes en el DOM de JavaScript
+
+// Los nodos hijos son los nodos que están directamente dentro de otro nodo
+// Por ejemplo, si tenemos un elemento HTML <div> que contiene un elemento <p>, el nodo <p> es un hijo del nodo <div>
+
+// Los nodos descendientes son todos los nodos que están dentro de otro nodo, incluyendo los nodos hijos y los nodos hijos de los nodos hijos
+// Por ejemplo, si tenemos un elemento HTML <div> que contiene un elemento <p> que contiene un elemento <span>, el nodo <span> es un descendiente del nodo <div>
+
+// Propiedades y métodos relacionados con los nodos hijos y descendientes:
+// - childNodes: devuelve una lista de nodos hijos
+// - children: devuelve una lista de nodos hijos que son elementos HTML
+// - firstChild: devuelve el primer nodo hijo
+// - lastChild: devuelve el último nodo hijo
+// - hasChildNodes(): devuelve true si el nodo tiene hijos, false en caso contrario
+// - querySelector(): devuelve el primer nodo descendiente que coincide con el selector especificado
+// - querySelectorAll(): devuelve una lista de nodos descendientes que coinciden con el selector especificado
+
+// Ejemplo de uso:
+// var nodo = document.getElementById('miNodo');
+// var hijos = nodo.childNodes;
+// console.log(hijos.length); // imprime el número de hijos
+// var primerHijo = nodo.firstChild;
+// console.log(primerHijo.nodeName); // imprime el nombre del primer hijo
+// var descendientes = nodo.querySelectorAll('p');
+// console.log(descendientes.length); // imprime el número de descendientes que son elementos <p>
+
+// Nodos hermanos en el DOM de JavaScript
+
+// Los nodos hermanos son los nodos que tienen el mismo nodo padre
+// Por ejemplo, si tenemos un elemento HTML <div> que contiene dos elementos <p>, los dos elementos <p> son hermanos
+
+// Propiedades y métodos relacionados con los nodos hermanos:
+// - nextSibling: devuelve el nodo hermano siguiente
+// - previousSibling: devuelve el nodo hermano anterior
+// - nextElementSibling: devuelve el nodo hermano siguiente que es un elemento HTML
+// - previousElementSibling: devuelve el nodo hermano anterior que es un elemento HTML
+
+// Ejemplo de uso:
+// var nodo = document.getElementById('miNodo');
+// var hermanoSiguiente = nodo.nextSibling;
+// console.log(hermanoSiguiente.nodeName); // imprime el nombre del nodo hermano siguiente
+// var hermanoAnterior = nodo.previousSibling;
+// console.log(hermanoAnterior.nodeName); // imprime el nombre del nodo hermano anterior
+// var hermanoSiguienteElemento = nodo.nextElementSibling;
+// console.log(hermanoSiguienteElemento.nodeName); // imprime el nombre del nodo hermano siguiente que es un elemento HTML
+// var hermanoAnteriorElemento = nodo.previousElementSibling;
+// console.log(hermanoAnteriorElemento.nodeName); // imprime el nombre del nodo hermano anterior que es un elemento HTML
+
+// Diferencias entre nodos y elementos en el DOM de JavaScript
+
+// Los nodos son los elementos que componen el árbol del DOM (Document Object Model)
+// Cada nodo tiene una serie de propiedades y métodos que permiten interactuar con él
+
+// Los elementos son una subclase de nodos que representan los elementos HTML
+// Los elementos tienen todas las propiedades y métodos de los nodos, además de algunas propias
+
+// Algunas de las diferencias clave entre nodos y elementos son:
+
+// - Todos los elementos son nodos, pero no todos los nodos son elementos
+// - Los nodos pueden ser de diferentes tipos (elementos, texto, comentarios, etc.), mientras que los elementos siempre son de tipo elemento
+// - Los elementos tienen un nombre de etiqueta (tagName) y una lista de atributos, mientras que los nodos no
+
+// Ejemplo de uso:
+// var nodo = document.getElementById('miNodo');
+// console.log(nodo.nodeName); // imprime el nombre del nodo
+// console.log(nodo.nodeType); // imprime el tipo del nodo
+// if (nodo.nodeType === 1) { // si el nodo es un elemento
+//   console.log(nodo.tagName); // imprime el nombre de la etiqueta del elemento
+//   console.log(nodo.attributes); // imprime la lista de atributos del elemento
+// }
