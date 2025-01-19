@@ -3,4 +3,5 @@ function cambiar_texto() {
     parrafo.textContent = "Se cambio el texto con el boton";
     parrafo.style.fontSize = "24px";
     parrafo.style.color = "red";
+    console.log(parrafo)
 }
