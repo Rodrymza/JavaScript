@@ -6,7 +6,7 @@ Vídeo: https://youtu.be/1glVfFxj8a4?t=14229
 // Objetos
 
 // Sintaxis
-
+//similar a la sintaxis de mapas
 let person = {
     name: "Brais",
     age: 37,
@@ -69,7 +69,7 @@ let person3 = {
         name: "Programador",
         exp: 15,
         work: function () {
-            console.log(`La persona de ${this.age} años de experiencia trabaja.`)
+            console.log(`La persona de ${this.exp} años de experiencia trabaja. ${person3.name}`)
         }
     }
 }
@@ -106,7 +106,7 @@ for (let key in person4) {
 
 // Funciones como objetos
 
-function Person(name, age) { // Debería ser una clase
+function Person(name, age) { // Debería ser una clase, constructor de clase
     this.name = name
     this.age = age
 }

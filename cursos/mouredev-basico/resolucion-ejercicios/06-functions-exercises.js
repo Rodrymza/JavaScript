@@ -108,7 +108,15 @@ function invertirPalabra(palabra) {
   return palabraInvertida;
 }
 
-console.log(invertirPalabra("Rodrigo"))
+let listaPalabras = ["zapato", "medias", "ciruelas", "frutillas"]
+
+let palabrasInvertidas = []
+
+listaPalabras.forEach(palabra => {
+  palabrasInvertidas.push(invertirPalabra(palabra))
+});
+
+console.log(palabrasInvertidas)
 
 // 10. Crea una función que calcule el factorial de un número dado
 

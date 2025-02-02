@@ -42,6 +42,7 @@ let person3 = new DefaultPerson("Brais", 37)
 console.log(person3)
 
 // Acceso a propiedades
+//Se utiliza notacion de punto o corchetes, se pueden modificar las propiedades
 
 console.log(person3.alias)
 console.log(person3["alias"])
@@ -70,11 +71,11 @@ let person4 = new PersonWithMethod("Brais", 37, "MoureDev")
 person4.walk()
 
 // Propiedades privadas
-
+//Se utiliza # para declarar una propiedad privada, estas propiedades no se pueden acceder desde fuera de la clase  y no se pueden modificar
 class PrivatePerson {
 
     #bank
-
+    //las propiedades privadas deben ser declaradas en el constructor
     constructor(name, age, alias, bank) {
         this.name = name
         this.age = age
@@ -92,12 +93,12 @@ let person5 = new PrivatePerson("Brais", 37, "MoureDev", "IBAN123456789")
 
 // No podemos acceder
 // console.log(person5.bank) 
-// person5.bank = "new IBAN123456789" // bank no es #bank
+// person5.bank = "new IBAN123456789" // bank no es #bank, es una propiedad distinta
 
 console.log(person5)
 
 // Getters y Setters
-
+//Sirven para acceder a propiedades privadas, se utiliza get y set para acceder a las propiedades privadas
 class GetSetPerson {
 
     #name
