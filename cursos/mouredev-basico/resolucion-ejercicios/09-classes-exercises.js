@@ -34,10 +34,65 @@ Alumno.mostrarMensaje("Hola")
 
 // 6. Crea una clase que haga uso de herencia
 
+class Recursante extends Alumno {
+    constructor(nombre, edad, anioRecursante) {
+        super(nombre, edad)
+        this.anioRecursante = anioRecursante
+    }
+
+    mostrarAlumno() {
+        super.mostrarAlumno()
+        console.log("Este alumno es recursante")
+    }
+}
+
+alumno_recursante = new Recursante("Perez", 29, "2022")
+
+alumno_recursante.mostrarAlumno()
+
 // 7. Crea una clase que haga uso de getters y setters
+
+class Usuario {
+    #id
+    #nombre
+    #alias
+    constructor(nombre, alias, id) {
+        this.#nombre = nombre
+        this.#alias = alias
+        this.#id = id
+    }
+
+    get nombre() {
+        return this.#nombre
+    }
+
+    get alias() {
+        return this.#alias
+    }
+
+    get id() {
+        return this.#id
+    } 
+
+    set nombre(nombre) {
+        this.#nombre = nombre
+    }
+
+    set alias(alias) {
+        this.#alias = alias
+    }
+
+    set id(id) {
+        this.#id = id
+    } 
+
+
+}
 
 // 8. Modifica la clase con getters y setters para que use propiedades privadas
 
 // 9. Utiliza los get y set y muestra sus valores
 
+let usuario = new Usuario("Rodrigo", "rodrigo", 1)
+console.log(usuario.nombre)
 // 10. Sobrescribe un método de una clase que utilice herencia 
