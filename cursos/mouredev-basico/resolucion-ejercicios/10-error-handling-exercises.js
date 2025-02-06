@@ -1,8 +1,3 @@
-/*
-Clase 41 - Ejercicios: Manejo de errores
-Vídeo: https://youtu.be/1glVfFxj8a4?t=20392
-*/
-
 // 1. Captura una excepción utilizando try-catch
 let persona = {
     nombre : "Rodrigo",
@@ -36,19 +31,26 @@ if (user != "rodry") {
 // 4. Crea una excepción personalizada
 
 class letrasMayusculas extends Error {
-    constructor(message, text) {
-        super(message)
-        this.text = text
-    }
-
-}
-
-let texto = "hola"
-if (texto != texto.toUpperCase()) {
-    throw new letrasMayusculas("El mensaje debe estar en mayusculas")
+    constructor(message) {
+        super(message)  
 }
 
 // 5. Lanza una excepción personalizada
+
+let texto = "minusculas"
+try {
+    if (texto != texto.toUpperCase()) {
+        throw new letrasMayusculas("El mensaje debe estar en mayusculas")
+    } else {
+        console.log("El mensaje está en mayúsculas")
+    }
+} catch (error) {
+    if (error instanceof letrasMayusculas) {
+        console.log("Se ha producido un error:", error.message)
+    } else {
+        console.log("Se ha producido un error:", error.message)
+    }
+}
 
 // 6. Lanza varias excepciones según una lógica definida
 

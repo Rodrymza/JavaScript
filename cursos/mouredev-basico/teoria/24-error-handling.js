@@ -42,7 +42,7 @@ try {
 
 // No está soportado
 // try {
-//     console.log(myObject.email)
+//     console.log(myObject.email)      si no se coloca el catch el error hara que el programa deje de ejecutarse, no se capura el error
 // } finally {
 //     console.log("Este código se ejecuta siempre")
 // }
@@ -65,6 +65,7 @@ function sumIntegers(a, b) {
     }
     return a + b
 }
+
 
 try {
     console.log(sumIntegers(5, 10))
@@ -108,4 +109,18 @@ try {
 } catch (error) {
     console.log("Se ha producido un error personalizado:", error.message)
     error.printNumbers()
+}
+
+
+function contieneVocales(texto) {
+    let vocales = ["a", "e", "i", "o", "u"]
+    if (!texto.includes(vocales)) {
+        throw new TypeError("El texto no contiene vocales")
+    }
+}
+
+try {
+    contieneVocales("hola")
+} catch (error) {
+    console.log("Se ha producido un error:", error.message)
 }
