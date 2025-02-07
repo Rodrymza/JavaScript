@@ -69,7 +69,7 @@ function sumIntegers(a, b) {
 
 try {
     console.log(sumIntegers(5, 10))
-    // console.log(sumIntegers(5.5, 10))
+     console.log(sumIntegers(5.5, 10))
     console.log(sumIntegers("5", 10))
     // console.log(sumIntegers(5, "10"))
     // console.log(sumIntegers("5", "10"))
